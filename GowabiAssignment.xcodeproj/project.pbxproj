@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		3A5E824F28D3771A00394771 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E824E28D3771A00394771 /* AppDelegate.swift */; };
 		3A5E825128D3771A00394771 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E825028D3771A00394771 /* SceneDelegate.swift */; };
-		3A5E825328D3771A00394771 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E825228D3771A00394771 /* ViewController.swift */; };
-		3A5E825628D3771A00394771 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E825428D3771A00394771 /* Main.storyboard */; };
+		3A5E825328D3771A00394771 /* ContinueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E825228D3771A00394771 /* ContinueController.swift */; };
 		3A5E825828D3771C00394771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E825728D3771C00394771 /* Assets.xcassets */; };
 		3A5E825B28D3771C00394771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E825928D3771C00394771 /* LaunchScreen.storyboard */; };
+		6BFDB9B31E54607F990D4381 /* Pods_GowabiAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475C957345F4A3956295AE69 /* Pods_GowabiAssignment.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		3A5E824B28D3771A00394771 /* GowabiAssignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GowabiAssignment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A5E824E28D3771A00394771 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A5E825028D3771A00394771 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3A5E825228D3771A00394771 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		3A5E825528D3771A00394771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A5E825228D3771A00394771 /* ContinueController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueController.swift; sourceTree = "<group>"; };
 		3A5E825728D3771C00394771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A5E825A28D3771C00394771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A5E825C28D3771C00394771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		475C957345F4A3956295AE69 /* Pods_GowabiAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GowabiAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5713BD5AC35307C779000398 /* Pods-GowabiAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GowabiAssignment.release.xcconfig"; path = "Target Support Files/Pods-GowabiAssignment/Pods-GowabiAssignment.release.xcconfig"; sourceTree = "<group>"; };
+		ECE45A4BA0B751F3B05BC68F /* Pods-GowabiAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GowabiAssignment.debug.xcconfig"; path = "Target Support Files/Pods-GowabiAssignment/Pods-GowabiAssignment.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BFDB9B31E54607F990D4381 /* Pods_GowabiAssignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		09E2544A4933C7CED2DDB82B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				475C957345F4A3956295AE69 /* Pods_GowabiAssignment.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3A5E824228D3771A00394771 = {
 			isa = PBXGroup;
 			children = (
 				3A5E824D28D3771A00394771 /* GowabiAssignment */,
 				3A5E824C28D3771A00394771 /* Products */,
+				8EEDDFFCF0C3FA9CDA013432 /* Pods */,
+				09E2544A4933C7CED2DDB82B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +69,120 @@
 		3A5E824D28D3771A00394771 /* GowabiAssignment */ = {
 			isa = PBXGroup;
 			children = (
-				3A5E824E28D3771A00394771 /* AppDelegate.swift */,
-				3A5E825028D3771A00394771 /* SceneDelegate.swift */,
-				3A5E825228D3771A00394771 /* ViewController.swift */,
-				3A5E825428D3771A00394771 /* Main.storyboard */,
-				3A5E825728D3771C00394771 /* Assets.xcassets */,
-				3A5E825928D3771C00394771 /* LaunchScreen.storyboard */,
-				3A5E825C28D3771C00394771 /* Info.plist */,
+				3A5E826328D378A500394771 /* Resources */,
+				3A5E826228D3789D00394771 /* Sources */,
 			);
 			path = GowabiAssignment;
+			sourceTree = "<group>";
+		};
+		3A5E826228D3789D00394771 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E826728D378D500394771 /* Scenes */,
+				3A5E826628D378C700394771 /* App */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3A5E826328D378A500394771 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E826528D378B000394771 /* Supporting files */,
+				3A5E826428D378AA00394771 /* Config */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3A5E826428D378AA00394771 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E825C28D3771C00394771 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		3A5E826528D378B000394771 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E825728D3771C00394771 /* Assets.xcassets */,
+			);
+			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		3A5E826628D378C700394771 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E824E28D3771A00394771 /* AppDelegate.swift */,
+				3A5E825028D3771A00394771 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		3A5E826728D378D500394771 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E826A28D378F400394771 /* Model */,
+				3A5E826928D378E500394771 /* View */,
+				3A5E826828D378DC00394771 /* ViewModel */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		3A5E826828D378DC00394771 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		3A5E826928D378E500394771 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E826D28D3791300394771 /* Views */,
+				3A5E826C28D3790500394771 /* Controllers */,
+				3A5E826B28D378FC00394771 /* Storyboards */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A5E826A28D378F400394771 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3A5E826B28D378FC00394771 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E825928D3771C00394771 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		3A5E826C28D3790500394771 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E825228D3771A00394771 /* ContinueController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A5E826D28D3791300394771 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8EEDDFFCF0C3FA9CDA013432 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ECE45A4BA0B751F3B05BC68F /* Pods-GowabiAssignment.debug.xcconfig */,
+				5713BD5AC35307C779000398 /* Pods-GowabiAssignment.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3A5E825F28D3771C00394771 /* Build configuration list for PBXNativeTarget "GowabiAssignment" */;
 			buildPhases = (
+				AB32463074D39E03E0947D71 /* [CP] Check Pods Manifest.lock */,
 				3A5E824728D3771A00394771 /* Sources */,
 				3A5E824828D3771A00394771 /* Frameworks */,
 				3A5E824928D3771A00394771 /* Resources */,
+				18008A721825396FC42414D9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -127,18 +247,59 @@
 			files = (
 				3A5E825B28D3771C00394771 /* LaunchScreen.storyboard in Resources */,
 				3A5E825828D3771C00394771 /* Assets.xcassets in Resources */,
-				3A5E825628D3771A00394771 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		18008A721825396FC42414D9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GowabiAssignment/Pods-GowabiAssignment-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GowabiAssignment/Pods-GowabiAssignment-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GowabiAssignment/Pods-GowabiAssignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AB32463074D39E03E0947D71 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GowabiAssignment-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3A5E824728D3771A00394771 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A5E825328D3771A00394771 /* ViewController.swift in Sources */,
+				3A5E825328D3771A00394771 /* ContinueController.swift in Sources */,
 				3A5E824F28D3771A00394771 /* AppDelegate.swift in Sources */,
 				3A5E825128D3771A00394771 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,14 +308,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		3A5E825428D3771A00394771 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3A5E825528D3771A00394771 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		3A5E825928D3771C00394771 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -282,6 +435,7 @@
 		};
 		3A5E826028D3771C00394771 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECE45A4BA0B751F3B05BC68F /* Pods-GowabiAssignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -292,7 +446,6 @@
 				INFOPLIST_FILE = GowabiAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +463,7 @@
 		};
 		3A5E826128D3771C00394771 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5713BD5AC35307C779000398 /* Pods-GowabiAssignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -320,7 +474,6 @@
 				INFOPLIST_FILE = GowabiAssignment/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

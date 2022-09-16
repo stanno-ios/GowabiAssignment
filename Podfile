@@ -8,5 +8,6 @@ target 'GowabiAssignment' do
   # Pods for GowabiAssignment
 	pod 'RxSwift'
 	pod 'RxCocoa'
+	pod 'Alamofire'
 
 end

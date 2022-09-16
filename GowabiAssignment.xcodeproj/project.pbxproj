@@ -12,6 +12,12 @@
 		3A5E825328D3771A00394771 /* ContinueController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E825228D3771A00394771 /* ContinueController.swift */; };
 		3A5E825828D3771C00394771 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E825728D3771C00394771 /* Assets.xcassets */; };
 		3A5E825B28D3771C00394771 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A5E825928D3771C00394771 /* LaunchScreen.storyboard */; };
+		3A5E826F28D382E200394771 /* Currency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E826E28D382E200394771 /* Currency.swift */; };
+		3A5E827128D3839D00394771 /* Services.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E827028D3839D00394771 /* Services.swift */; };
+		3A5E827328D3848B00394771 /* ContinueView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E827228D3848B00394771 /* ContinueView.swift */; };
+		3A5E827628D3874100394771 /* MassageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A5E827528D3874100394771 /* MassageService.swift */; };
+		3AE7519428D41B4E00D3B12A /* MassageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7519328D41B4E00D3B12A /* MassageViewModel.swift */; };
+		3AE7519628D41E1900D3B12A /* MassageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE7519528D41E1900D3B12A /* MassageListViewModel.swift */; };
 		6BFDB9B31E54607F990D4381 /* Pods_GowabiAssignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 475C957345F4A3956295AE69 /* Pods_GowabiAssignment.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +29,12 @@
 		3A5E825728D3771C00394771 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A5E825A28D3771C00394771 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A5E825C28D3771C00394771 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A5E826E28D382E200394771 /* Currency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currency.swift; sourceTree = "<group>"; };
+		3A5E827028D3839D00394771 /* Services.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Services.swift; sourceTree = "<group>"; };
+		3A5E827228D3848B00394771 /* ContinueView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContinueView.swift; sourceTree = "<group>"; };
+		3A5E827528D3874100394771 /* MassageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageService.swift; sourceTree = "<group>"; };
+		3AE7519328D41B4E00D3B12A /* MassageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageViewModel.swift; sourceTree = "<group>"; };
+		3AE7519528D41E1900D3B12A /* MassageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MassageListViewModel.swift; sourceTree = "<group>"; };
 		475C957345F4A3956295AE69 /* Pods_GowabiAssignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GowabiAssignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5713BD5AC35307C779000398 /* Pods-GowabiAssignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GowabiAssignment.release.xcconfig"; path = "Target Support Files/Pods-GowabiAssignment/Pods-GowabiAssignment.release.xcconfig"; sourceTree = "<group>"; };
 		ECE45A4BA0B751F3B05BC68F /* Pods-GowabiAssignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GowabiAssignment.debug.xcconfig"; path = "Target Support Files/Pods-GowabiAssignment/Pods-GowabiAssignment.debug.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +143,8 @@
 		3A5E826828D378DC00394771 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				3AE7519328D41B4E00D3B12A /* MassageViewModel.swift */,
+				3AE7519528D41E1900D3B12A /* MassageListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -148,6 +162,8 @@
 		3A5E826A28D378F400394771 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A5E827428D3871200394771 /* Decodable */,
+				3A5E827528D3874100394771 /* MassageService.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -171,8 +187,18 @@
 		3A5E826D28D3791300394771 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				3A5E827228D3848B00394771 /* ContinueView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		3A5E827428D3871200394771 /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				3A5E827028D3839D00394771 /* Services.swift */,
+				3A5E826E28D382E200394771 /* Currency.swift */,
+			);
+			path = Decodable;
 			sourceTree = "<group>";
 		};
 		8EEDDFFCF0C3FA9CDA013432 /* Pods */ = {
@@ -181,7 +207,6 @@
 				ECE45A4BA0B751F3B05BC68F /* Pods-GowabiAssignment.debug.xcconfig */,
 				5713BD5AC35307C779000398 /* Pods-GowabiAssignment.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -299,8 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A5E827628D3874100394771 /* MassageService.swift in Sources */,
+				3A5E827128D3839D00394771 /* Services.swift in Sources */,
+				3AE7519628D41E1900D3B12A /* MassageListViewModel.swift in Sources */,
+				3A5E827328D3848B00394771 /* ContinueView.swift in Sources */,
+				3A5E826F28D382E200394771 /* Currency.swift in Sources */,
 				3A5E825328D3771A00394771 /* ContinueController.swift in Sources */,
 				3A5E824F28D3771A00394771 /* AppDelegate.swift in Sources */,
+				3AE7519428D41B4E00D3B12A /* MassageViewModel.swift in Sources */,
 				3A5E825128D3771A00394771 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,7 +474,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MK8LDS6W26;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GowabiAssignment/Info.plist;
+				INFOPLIST_FILE = GowabiAssignment/Resources/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -471,7 +502,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = MK8LDS6W26;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GowabiAssignment/Info.plist;
+				INFOPLIST_FILE = GowabiAssignment/Resources/Config/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

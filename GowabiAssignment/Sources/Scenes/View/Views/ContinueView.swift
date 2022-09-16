@@ -24,6 +24,7 @@ class ContinueView: UIView {
     private func commonInit() {
         setupHierarchy()
         setupLayout()
+        setupView()
     }
     
     // MARK: - UI Elements
@@ -52,5 +53,9 @@ class ContinueView: UIView {
             continueButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             continueButton.centerYAnchor.constraint(equalTo: self.centerYAnchor)
         ])
+    }
+
+    private func setupView() {
+        self.backgroundColor = .systemBackground
     }
 }

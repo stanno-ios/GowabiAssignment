@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MassageViewModel {
+class BeautyServiceViewModel {
     
     private var currency: Currency
     private var service: Service
@@ -18,6 +18,6 @@ class MassageViewModel {
     }
     
     var displayTitle: String {
-        return service.name + " " + String(service.price) + " " + currency.label
+        return "\(service.name) \(service.price) \(currency.label)"
     }
 }

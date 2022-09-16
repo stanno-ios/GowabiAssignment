@@ -8,16 +8,14 @@
 import Foundation
 import RxSwift
 
-class MassageListViewModel {
+class BeautyServicesListViewModel {
     let title: String = "Services"
-    var items: Observable<[MassageViewModel]>!
-    var currencies: Observable<[Currency]>!
-    var services: Observable<[Service]>!
+    var items: Observable<[BeautyServiceViewModel]>!
     let bag = DisposeBag()
     
-    private let service: MassageService
+    private let service: BeautyService
     
-    init(service: MassageService = MassageService()) {
+    init(service: BeautyService = BeautyService()) {
         self.service = service
         fetchViewModels()
     }
@@ -29,7 +27,7 @@ class MassageListViewModel {
                     let correctCurrency = cur.first { currency in
                         currency.id == service.currencyID
                     }
-                   return MassageViewModel(currency: correctCurrency!, service: service)
+                   return BeautyServiceViewModel(currency: correctCurrency!, service: service)
                 }
             }
     }

@@ -12,7 +12,6 @@ struct ServiceResponse: Codable {
     let metadata: ServiceMetadata
 }
 
-// MARK: - Metadata
 struct ServiceMetadata: Codable {
     let id: String
     let metadataPrivate: Bool

@@ -9,10 +9,8 @@ import Foundation
 import RxSwift
 import Alamofire
 
-class BeautyService {
-    
-    let bag = DisposeBag()
-    
+class NetworkService {
+    // Fetches a list of currencies
     func fetchCurrencies() -> Observable<[Currency]> {
         let url = "https://api.jsonbin.io/v3/b/632351ffe13e6063dca94d91"
         return Observable<[Currency]>.create { observer -> Disposable in
@@ -26,6 +24,7 @@ class BeautyService {
         }
     }
     
+    // Fetches a list of services
     func fetchServices() -> Observable<[Service]> {
         let url = "https://api.jsonbin.io/v3/b/6323e08ea1610e63862ceb46"
         return Observable<[Service]>.create { observer -> Disposable in

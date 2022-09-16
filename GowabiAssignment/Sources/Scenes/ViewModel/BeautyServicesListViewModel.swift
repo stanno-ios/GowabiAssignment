@@ -9,18 +9,23 @@ import Foundation
 import RxSwift
 
 class BeautyServicesListViewModel {
+    
+    // MARK: - Properties
+    
     let title: String = "Services"
     var items: Observable<[BeautyServiceViewModel]>!
-    let bag = DisposeBag()
+    private let bag = DisposeBag()
+    private let service: NetworkService
     
-    private let service: BeautyService
+    // MARK: - Initialization
     
-    init(service: BeautyService = BeautyService()) {
+    init(service: NetworkService = NetworkService()) {
         self.service = service
         fetchViewModels()
     }
     
-    func fetchViewModels() {
+    // Fetches a list of view models with a correct currency for each
+    private func fetchViewModels() {
         items = Observable.zip(service.fetchCurrencies(), service.fetchServices())
             .map { (cur, ser) in
                 ser.map { service in

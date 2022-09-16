@@ -11,7 +11,7 @@ import RxCocoa
 
 class AvailableServicesController: UIViewController {
     
-    // MARK: - ViewModel
+    // MARK: - Properties
     
     var viewModel: BeautyServicesListViewModel!
     let bag = DisposeBag()

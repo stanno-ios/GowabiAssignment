@@ -28,14 +28,19 @@ class ContinueController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view = ContinueView()
-        continueView!.continueButton.rx
+        self.bindButtonAction()
+    }
+    
+    // MARK: - Button action
+    
+    private func bindButtonAction() {
+        guard let continueView = continueView else { return }
+        continueView.continueButton.rx
             .tap
             .subscribe(onNext: { [weak self] _ in
                 self?.navigateToServices()
             }).disposed(by: bag)
     }
-    
-    // MARK: - Button action
     
     private func navigateToServices() {
         let servicesVC = AvailableServicesController()

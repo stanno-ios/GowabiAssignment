@@ -18,7 +18,7 @@ class AvailableServicesController: UIViewController {
     
     // MARK: - AvailableServicesView
     
-    private var availableServicesView: AvailableServicesView? {
+    var availableServicesView: AvailableServicesView? {
         guard isViewLoaded else { return nil }
         return view as? AvailableServicesView
     }

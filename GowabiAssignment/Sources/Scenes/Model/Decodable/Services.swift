@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct ServiceResponse: Codable {
+struct ServiceResponse: Decodable {
     let record: ServiceRecord
     let metadata: ServiceMetadata
 }
 
-struct ServiceMetadata: Codable {
+struct ServiceMetadata: Decodable {
     let id: String
     let metadataPrivate: Bool
     let createdAt: String
@@ -24,11 +24,11 @@ struct ServiceMetadata: Codable {
     }
 }
 
-struct ServiceRecord: Codable {
+struct ServiceRecord: Decodable {
     let services: [Service]
 }
 
-struct Service: Codable {
+struct Service: Decodable {
     let id, currencyID: Int
     let name: String
     let price: Int

@@ -7,34 +7,26 @@
 
 import Foundation
 import RxSwift
-import Alamofire
+import RxCocoa
 
 class NetworkService {
-    // Fetches a list of currencies
-    func fetchCurrencies() -> Observable<[Currency]> {
-        let url = "https://api.jsonbin.io/v3/b/632351ffe13e6063dca94d91"
-        return Observable<[Currency]>.create { observer -> Disposable in
-            AF.request(url)
-                .validate()
-                .responseDecodable(of: CurrencyResponse.self) { data in
-                    guard let result = data.value?.record.currencies else { return }
-                    observer.onNext(result)
-                }
-            return Disposables.create { }
-        }
-    }
     
-    // Fetches a list of services
-    func fetchServices() -> Observable<[Service]> {
-        let url = "https://api.jsonbin.io/v3/b/6323e08ea1610e63862ceb46"
-        return Observable<[Service]>.create { observer -> Disposable in
-            AF.request(url)
-                .validate()
-                .responseDecodable(of: ServiceResponse.self) { data in
-                    guard let result = data.value?.record.services else { return }
-                    observer.onNext(result)
+    // Fetch any decodable
+    func fetch<T: Decodable>(from resource: Resource<T>) -> Observable<T> {
+        return Observable.just(resource.url)
+            .flatMap { url -> Observable<(response: HTTPURLResponse, data: Data)> in
+                let request = URLRequest(url: url)
+                return URLSession.shared.rx.response(request: request)
+            }.map { response, data -> T in
+                if 200..<300 ~= response.statusCode {
+                    return try JSONDecoder().decode(T.self, from: data)
+                } else {
+                    throw RxCocoaURLError.httpRequestFailed(response: response, data: data)
                 }
-            return Disposables.create { }
-        }        
+            }.asObservable()
     }
+}
+
+struct Resource<T> {
+    let url: URL
 }

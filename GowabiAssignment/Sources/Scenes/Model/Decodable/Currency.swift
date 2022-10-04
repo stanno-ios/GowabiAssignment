@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct CurrencyResponse: Codable {
+struct CurrencyResponse: Decodable {
     let record: CurrencyRecord
     let metadata: CurrencyMetadata
 }
 
-struct CurrencyMetadata: Codable {
+struct CurrencyMetadata: Decodable {
     let id: String
     let metadataPrivate: Bool
     let createdAt, name: String
@@ -24,11 +24,11 @@ struct CurrencyMetadata: Codable {
     }
 }
 
-struct CurrencyRecord: Codable {
+struct CurrencyRecord: Decodable {
     let currencies: [Currency]
 }
 
-struct Currency: Codable {
+struct Currency: Decodable {
     let id: Int
     let label: String
 }

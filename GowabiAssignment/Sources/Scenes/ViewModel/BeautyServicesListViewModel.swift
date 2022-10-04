@@ -13,6 +13,8 @@ class BeautyServicesListViewModel {
     // MARK: - Properties
     
     let title: String = "Services"
+    let servicesResource = Resource<ServiceResponse>(url: URL(string: "https://api.jsonbin.io/v3/b/6323e08ea1610e63862ceb46")!)
+    let currenciesResource = Resource<CurrencyResponse>(url: URL(string: "https://api.jsonbin.io/v3/b/632351ffe13e6063dca94d91")!)
     var items: Observable<[BeautyServiceViewModel]>!
     private let bag = DisposeBag()
     private let service: NetworkService
@@ -26,14 +28,16 @@ class BeautyServicesListViewModel {
     
     // Fetches a list of view models with a correct currency for each
     private func fetchViewModels() {
-        items = Observable.zip(service.fetchCurrencies(), service.fetchServices())
-            .map { (cur, ser) in
-                ser.map { service in
-                    let correctCurrency = cur.first { currency in
+        let currencyResponse: Observable<CurrencyResponse> = service.fetch(from: currenciesResource)
+        let servicesResponse: Observable<ServiceResponse> = service.fetch(from: servicesResource)
+        items = Observable.zip(currencyResponse, servicesResponse)
+            .map({ (currencyResponse, serviceResponse) in
+                serviceResponse.record.services.map { service in
+                    let correctCurrency = currencyResponse.record.currencies.first { currency in
                         currency.id == service.currencyID
                     }
-                   return BeautyServiceViewModel(currency: correctCurrency!, service: service)
+                    return BeautyServiceViewModel(currency: correctCurrency!, service: service)
                 }
-            }
+            })
     }
 }
